@@ -1,0 +1,98 @@
+experience_years,skill_count,education_level,location,industry,salary
+1,5,bachelor,San Francisco,technology,85000
+2,7,bachelor,San Francisco,technology,95000
+3,10,bachelor,San Francisco,technology,110000
+4,12,bachelor,San Francisco,technology,125000
+5,15,master,San Francisco,technology,145000
+6,18,master,San Francisco,technology,160000
+7,20,master,San Francisco,technology,175000
+8,22,phd,San Francisco,technology,190000
+10,25,phd,San Francisco,technology,210000
+1,4,bachelor,New York,technology,80000
+2,6,bachelor,New York,technology,90000
+3,9,bachelor,New York,technology,105000
+4,11,bachelor,New York,technology,120000
+5,14,master,New York,technology,140000
+6,17,master,New York,technology,155000
+7,19,master,New York,technology,170000
+8,21,phd,New York,technology,185000
+10,24,phd,New York,technology,205000
+1,5,bachelor,Austin,technology,70000
+2,7,bachelor,Austin,technology,80000
+3,10,bachelor,Austin,technology,95000
+4,12,bachelor,Austin,technology,110000
+5,15,master,Austin,technology,130000
+6,18,master,Austin,technology,145000
+7,20,master,Austin,technology,160000
+1,6,bachelor,Seattle,technology,75000
+2,8,bachelor,Seattle,technology,85000
+3,11,bachelor,Seattle,technology,100000
+4,13,bachelor,Seattle,technology,115000
+5,16,master,Seattle,technology,135000
+6,19,master,Seattle,technology,150000
+7,21,master,Seattle,technology,165000
+8,23,phd,Seattle,technology,180000
+1,4,bachelor,Boston,analytics,75000
+2,6,bachelor,Boston,analytics,85000
+3,9,bachelor,Boston,analytics,100000
+4,11,master,Boston,analytics,115000
+5,14,master,Boston,analytics,135000
+6,17,master,Boston,analytics,150000
+7,19,phd,Boston,analytics,165000
+1,5,bachelor,Chicago,enterprise software,70000
+2,7,bachelor,Chicago,enterprise software,80000
+3,10,bachelor,Chicago,enterprise software,95000
+4,12,bachelor,Chicago,enterprise software,110000
+5,15,master,Chicago,enterprise software,125000
+6,18,master,Chicago,enterprise software,140000
+1,6,bachelor,Denver,cloud services,80000
+2,8,bachelor,Denver,cloud services,90000
+3,11,bachelor,Denver,cloud services,105000
+4,13,master,Denver,cloud services,120000
+5,16,master,Denver,cloud services,140000
+6,19,master,Denver,cloud services,155000
+7,21,phd,Denver,cloud services,170000
+8,23,phd,Denver,cloud services,185000
+1,5,bachelor,Los Angeles,technology,75000
+2,7,bachelor,Los Angeles,technology,85000
+3,10,bachelor,Los Angeles,technology,100000
+4,12,bachelor,Los Angeles,technology,115000
+5,15,master,Los Angeles,technology,130000
+1,4,bachelor,Portland,technology,65000
+2,6,bachelor,Portland,technology,75000
+3,9,bachelor,Portland,technology,90000
+4,11,bachelor,Portland,technology,105000
+5,14,master,Portland,technology,120000
+1,5,bachelor,Miami,design,60000
+2,7,bachelor,Miami,design,70000
+3,10,bachelor,Miami,design,85000
+4,12,master,Miami,design,100000
+5,15,master,Miami,design,115000
+1,6,bachelor,Dallas,technology,70000
+2,8,bachelor,Dallas,technology,80000
+3,11,bachelor,Dallas,technology,95000
+4,13,bachelor,Dallas,technology,110000
+1,5,bachelor,Washington DC,cybersecurity,85000
+2,7,bachelor,Washington DC,cybersecurity,95000
+3,10,bachelor,Washington DC,cybersecurity,110000
+4,12,master,Washington DC,cybersecurity,125000
+5,15,master,Washington DC,cybersecurity,145000
+6,18,master,Washington DC,cybersecurity,160000
+1,7,bachelor,Remote,blockchain,90000
+2,9,bachelor,Remote,blockchain,105000
+3,12,bachelor,Remote,blockchain,125000
+4,15,master,Remote,blockchain,145000
+5,18,master,Remote,blockchain,165000
+6,20,master,Remote,blockchain,180000
+1,5,bachelor,San Diego,mobile apps,75000
+2,7,bachelor,San Diego,mobile apps,85000
+3,10,bachelor,San Diego,mobile apps,100000
+4,12,master,San Diego,mobile apps,115000
+5,15,master,San Diego,mobile apps,130000
+2,8,bachelor,San Francisco,artificial intelligence,100000
+3,11,bachelor,San Francisco,artificial intelligence,120000
+4,14,master,San Francisco,artificial intelligence,145000
+5,17,master,San Francisco,artificial intelligence,165000
+6,20,phd,San Francisco,artificial intelligence,185000
+7,22,phd,San Francisco,artificial intelligence,200000
+8,25,phd,San Francisco,artificial intelligence,220000
