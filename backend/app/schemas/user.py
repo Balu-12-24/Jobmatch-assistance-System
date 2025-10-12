@@ -5,8 +5,9 @@ from datetime import datetime
 
 class UserCreate(BaseModel):
     email: EmailStr
-    password: str = Field(..., min_length=6)
-    full_name: str
+    password: str = Field(..., min_length=6, description="Password must be at least 6 characters")
+    full_name: str = Field(..., min_length=2, description="Full name is required")
+    country: Optional[str] = Field(default='India', description="User's country")
 
 
 class UserLogin(BaseModel):
@@ -19,6 +20,7 @@ class UserResponse(BaseModel):
     email: str
     full_name: str
     is_premium: bool
+    country: Optional[str] = 'India'
     created_at: datetime
     
     class Config:
@@ -45,6 +47,7 @@ class UserProfileResponse(BaseModel):
     skills: Optional[List[str]] = None
     experience_years: Optional[int] = None
     education_level: Optional[str] = None
+    education_institution: Optional[str] = None
     location: Optional[str] = None
     preferences: Optional[dict] = None
     updated_at: datetime

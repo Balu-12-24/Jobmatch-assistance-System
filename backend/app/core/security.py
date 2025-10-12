@@ -42,6 +42,31 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -
     return encoded_jwt
 
 
+def create_refresh_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
+    """
+    Create a JWT refresh token with longer expiration.
+    
+    Args:
+        data: Dictionary containing claims to encode in the token
+        expires_delta: Optional expiration time delta
+        
+    Returns:
+        Encoded JWT refresh token string
+    """
+    to_encode = data.copy()
+    
+    if expires_delta:
+        expire = datetime.utcnow() + expires_delta
+    else:
+        # Refresh tokens last 7 days by default
+        expire = datetime.utcnow() + timedelta(days=7)
+    
+    to_encode.update({"exp": expire, "type": "refresh"})
+    encoded_jwt = jwt.encode(to_encode, settings.JWT_SECRET, algorithm=settings.JWT_ALGORITHM)
+    
+    return encoded_jwt
+
+
 def decode_access_token(token: str) -> Optional[dict]:
     """
     Decode and verify a JWT access token.
@@ -50,10 +75,25 @@ def decode_access_token(token: str) -> Optional[dict]:
         token: JWT token string
         
     Returns:
-        Decoded token payload or None if invalid
+        Decoded token payload or None if invalid/expired
     """
     try:
         payload = jwt.decode(token, settings.JWT_SECRET, algorithms=[settings.JWT_ALGORITHM])
         return payload
     except JWTError:
         return None
+
+
+def verify_token_type(payload: dict, expected_type: str = "access") -> bool:
+    """
+    Verify the token type from payload.
+    
+    Args:
+        payload: Decoded token payload
+        expected_type: Expected token type ("access" or "refresh")
+        
+    Returns:
+        True if token type matches, False otherwise
+    """
+    token_type = payload.get("type", "access")  # Default to access for backward compatibility
+    return token_type == expected_type

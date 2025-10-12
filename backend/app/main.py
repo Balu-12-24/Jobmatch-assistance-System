@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.database import engine, Base
-from app.api import auth, resumes, jobs, profile, premium
+from app.api import auth, resumes, jobs, profile, premium, salary
 import logging
 
 logging.basicConfig(level=logging.INFO)
@@ -28,6 +28,7 @@ app.include_router(resumes.router)
 app.include_router(jobs.router)
 app.include_router(profile.router)
 app.include_router(premium.router)
+app.include_router(salary.router)
 
 
 @app.on_event("startup")
