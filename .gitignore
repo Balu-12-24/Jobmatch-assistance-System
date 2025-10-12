@@ -46,9 +46,7 @@ Thumbs.db
 *.sqlite
 
 # ML Models (if cached locally)
-models/
-*.pkl
-*.joblib
+
 
 # Qdrant local data (if running locally)
 qdrant_storage/
