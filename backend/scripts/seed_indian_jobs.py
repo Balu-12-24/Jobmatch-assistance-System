@@ -179,7 +179,8 @@ def verify_seeding(db: Session, vector_store: VectorStore):
     logger.info(f"  Tier 3: {tier3_jobs}")
     
     # Check by company type
-    company_types = db.query(Job.company_type, db.func.count(Job.id)).group_by(Job.company_type).all()
+    from sqlalchemy import func
+    company_types = db.query(Job.company_type, func.count(Job.id)).group_by(Job.company_type).all()
     logger.info(f"\nJobs by company type:")
     for company_type, count in company_types:
         logger.info(f"  {company_type}: {count}")

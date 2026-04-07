@@ -167,24 +167,6 @@ async def get_job_recommendations(
         )
 
 
-@router.get("/{job_id}", response_model=JobResponse)
-async def get_job_details(
-    job_id: int,
-    current_user: User = Depends(get_current_user),
-    db: Session = Depends(get_db)
-):
-    """Get detailed information about a specific job"""
-    job = db.query(Job).filter(Job.id == job_id).first()
-    
-    if not job:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Job not found"
-        )
-    
-    return job
-
-
 @router.post("/save")
 async def save_job(
     job_id: int,
@@ -225,7 +207,7 @@ async def save_job(
     return {"message": "Job saved successfully", "saved_job_id": saved_job.id}
 
 
-@router.get("/saved/list", response_model=JobRecommendationsResponse)
+@router.get("/saved", response_model=JobRecommendationsResponse)
 async def get_saved_jobs(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
@@ -251,3 +233,21 @@ async def get_saved_jobs(
         matches=matches,
         total_count=len(matches)
     )
+
+
+@router.get("/{job_id}", response_model=JobResponse)
+async def get_job_details(
+    job_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Get detailed information about a specific job"""
+    job = db.query(Job).filter(Job.id == job_id).first()
+    
+    if not job:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Job not found"
+        )
+    
+    return job
